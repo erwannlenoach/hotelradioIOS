@@ -12,10 +12,10 @@ const Footer = () => {
   return (
    
       <View style={styles.footerView}>
-        <FontAwesomeIcon icon={["fab", "instagram"]} style={styles.icons} size='40' onPress={() => Linking.openURL('instagram://user?username=hotelradioparis')} />
-        <FontAwesomeIcon icon={["fab", "tiktok"]} style={styles.icons} size='40'onPress={() => Linking.openURL('tiktok://user?username=hotelradioparis')}/>
-        <FontAwesomeIcon icon={["fab", "mixcloud"]} style={styles.icons} size='40' onPress={() => Linking.openURL('mixcloud://user/hotelradioparis')} />
-        <FontAwesomeIcon icon={faShoppingCart} style={styles.icons} size='40'  onPress={() => Linking.openURL('https://hotelradioparis.bigcartel.com/')}  />
+        <FontAwesomeIcon icon={["fab", "instagram"]} style={styles.icons} size={40} onPress={() => Linking.openURL('instagram://user?username=hotelradioparis')} />
+        <FontAwesomeIcon icon={["fab", "tiktok"]} style={styles.icons} size={40} onPress={() => Linking.openURL('tiktok://user?username=hotelradioparis')}/>
+        <FontAwesomeIcon icon={["fab", "mixcloud"]} style={styles.icons} size={40}  onPress={() => Linking.openURL('mixcloud://user/hotelradioparis')} />
+        <FontAwesomeIcon icon={faShoppingCart} style={styles.icons} size={40}   onPress={() => Linking.openURL('https://hotelradioparis.bigcartel.com/')}  />
       </View>
   );
 }
