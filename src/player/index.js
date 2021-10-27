@@ -1,16 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import TrackPlayer from 'react-native-track-player';
+import TrackPlayer, {State} from 'react-native-track-player';
 import {View, StyleSheet} from 'react-native';
 import {faPlay, faPause} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
 const Player = () => {
   const [displayBtnPlay, setDisplayBtnPlay] = useState(true);
+
   useEffect(() => {
     setUpTrackPlayer();
+    console.log(playing);
     return () => TrackPlayer.destroy();
   });
 
+ 
   let track = {
     url: 'https://radio2.pro-fhi.net/radio/9111/stream.mp3',
     title: 'Hotel Radio',
@@ -29,33 +32,36 @@ const Player = () => {
     compactCapabilities: [
       TrackPlayer.CAPABILITY_PLAY,
       TrackPlayer.CAPABILITY_PAUSE,
+      TrackPlayer.CAPABILITY_STOP,
     ],
   });
 
   const setUpTrackPlayer = async () => {
     try {
-    await TrackPlayer.setupPlayer();
-      await  TrackPlayer.add([track]);
+      await TrackPlayer.setupPlayer();
+      await TrackPlayer.add([track]);
       console.log('Tracks added');
     } catch (e) {
       console.log(e);
     }
   };
 
-  const start =  () => {
-    console.log("start")
-     setDisplayBtnPlay(true);
+  const start = async () => {
+    setDisplayBtnPlay(true);
     TrackPlayer.play();
     setDisplayBtnPlay(false);
   };
 
+  const pause = async () => {
+    TrackPlayer.pause();
+    setDisplayBtnPlay(true);
+  };
+
   const stop = async () => {
-    console.log("stop")
     TrackPlayer.stop();
     TrackPlayer.destroy();
     setDisplayBtnPlay(true);
   };
-
 
   return (
     <View style={styles.container}>
@@ -71,8 +77,14 @@ const Player = () => {
           icon={faPause}
           size={40}
           style={styles.Btn}
-          onPress={stop}
+          onPress={pause}
           display={!displayBtnPlay ? 'flex' : 'none'}
+        />
+        <Button
+          onPress={stop}
+          title="BACK TO LIVE"
+          color="#841584"
+          accessibilityLabel="Learn more about this purple button"
         />
       </View>
     </View>
