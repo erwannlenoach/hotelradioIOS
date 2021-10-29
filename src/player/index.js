@@ -1,18 +1,36 @@
 import React, {useEffect, useState} from 'react';
-import TrackPlayer, {State} from 'react-native-track-player';
-import {View, StyleSheet} from 'react-native';
+import TrackPlayer, {  useTrackPlayerEvents,
+  TrackPlayerEvents,
+  STATE_PLAYING,} from 'react-native-track-player';
+import {View, StyleSheet, Button} from 'react-native';
 import {faPlay, faPause} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
+
+const events = [
+  TrackPlayerEvents.PLAYBACK_STATE,
+  TrackPlayerEvents.PLAYBACK_ERROR,
+];
+
 const Player = () => {
   const [displayBtnPlay, setDisplayBtnPlay] = useState(true);
+  const [playerState, setPlayerState] = useState(false);
 
-  useEffect(() => {
-    setUpTrackPlayer();
-    console.log(playing);
-    return () => TrackPlayer.destroy();
+ // useEffect(() => {
+ //   setUpTrackPlayer();
+ //   return () => TrackPlayer.destroy();
+ // });
+
+  useTrackPlayerEvents(events, event => {
+    if (event.type === TrackPlayerEvents.PLAYBACK_ERROR) {
+      console.warn('An error occured while playing the current track.');
+    }
+    if (event.type === TrackPlayerEvents.PLAYBACK_STATE) {
+      setPlayerState(event.state);
+    }
   });
 
+  const isPlaying = playerState === STATE_PLAYING;
  
   let track = {
     url: 'https://radio2.pro-fhi.net/radio/9111/stream.mp3',
@@ -28,7 +46,8 @@ const Player = () => {
 
   TrackPlayer.updateOptions({
     stopWithApp: false,
-    capabilities: [TrackPlayer.CAPABILITY_PLAY, TrackPlayer.CAPABILITY_PAUSE],
+    capabilities: [TrackPlayer.CAPABILITY_PLAY, TrackPlayer.CAPABILITY_PAUSE,  TrackPlayer.CAPABILITY_PAUSE,
+      TrackPlayer.CAPABILITY_STOP],
     compactCapabilities: [
       TrackPlayer.CAPABILITY_PLAY,
       TrackPlayer.CAPABILITY_PAUSE,
@@ -38,7 +57,7 @@ const Player = () => {
 
   const setUpTrackPlayer = async () => {
     try {
-      await TrackPlayer.setupPlayer();
+     await TrackPlayer.setupPlayer();
       await TrackPlayer.add([track]);
       console.log('Tracks added');
     } catch (e) {
@@ -47,19 +66,24 @@ const Player = () => {
   };
 
   const start = async () => {
+    TrackPlayer.setupPlayer();
+    TrackPlayer.add([track]);
     setDisplayBtnPlay(true);
     TrackPlayer.play();
     setDisplayBtnPlay(false);
   };
 
-  const pause = async () => {
+  const stop = async () => {
     TrackPlayer.pause();
     setDisplayBtnPlay(true);
   };
 
-  const stop = async () => {
+  const reset = async () => {
+    console.log(isPlaying);
     TrackPlayer.stop();
     TrackPlayer.destroy();
+    TrackPlayer.add([track]);
+    TrackPlayer.play();
     setDisplayBtnPlay(true);
   };
 
@@ -71,20 +95,22 @@ const Player = () => {
           size={40}
           style={styles.Btn}
           onPress={start}
-          display={displayBtnPlay ? 'flex' : 'none'}
+          display={!isPlaying ? 'flex' : 'none'}
         />
         <FontAwesomeIcon
           icon={faPause}
           size={40}
           style={styles.Btn}
-          onPress={pause}
-          display={!displayBtnPlay ? 'flex' : 'none'}
-        />
-        <Button
           onPress={stop}
-          title="BACK TO LIVE"
+          display={isPlaying ? 'flex' : 'none'}
+        />
+      </View>
+      <View>
+        <Button
+          style={styles.button}
+          title="Live"
           color="#841584"
-          accessibilityLabel="Learn more about this purple button"
+          onPress={reset}
         />
       </View>
     </View>
