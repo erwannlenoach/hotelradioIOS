@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import TrackPlayer, {  useTrackPlayerEvents,
+import TrackPlayer, {
+  useTrackPlayerEvents,
   TrackPlayerEvents,
-  STATE_PLAYING,} from 'react-native-track-player';
-import {View, StyleSheet, Button} from 'react-native';
+  STATE_PLAYING,
+} from 'react-native-track-player';
+import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
 import {faPlay, faPause} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-
 
 const events = [
   TrackPlayerEvents.PLAYBACK_STATE,
@@ -13,13 +14,13 @@ const events = [
 ];
 
 const Player = () => {
-  const [displayBtnPlay, setDisplayBtnPlay] = useState(true);
+  //const [displayBtnPlay, setDisplayBtnPlay] = useState(true);
   const [playerState, setPlayerState] = useState(false);
 
- // useEffect(() => {
- //   setUpTrackPlayer();
- //   return () => TrackPlayer.destroy();
- // });
+  useEffect(() => {
+  setUpTrackPlayer();
+  //   return () => TrackPlayer.destroy();
+  });
 
   useTrackPlayerEvents(events, event => {
     if (event.type === TrackPlayerEvents.PLAYBACK_ERROR) {
@@ -31,7 +32,7 @@ const Player = () => {
   });
 
   const isPlaying = playerState === STATE_PLAYING;
- 
+
   let track = {
     url: 'https://radio2.pro-fhi.net/radio/9111/stream.mp3',
     title: 'Hotel Radio',
@@ -46,8 +47,12 @@ const Player = () => {
 
   TrackPlayer.updateOptions({
     stopWithApp: false,
-    capabilities: [TrackPlayer.CAPABILITY_PLAY, TrackPlayer.CAPABILITY_PAUSE,  TrackPlayer.CAPABILITY_PAUSE,
-      TrackPlayer.CAPABILITY_STOP],
+    capabilities: [
+      TrackPlayer.CAPABILITY_PLAY,
+      TrackPlayer.CAPABILITY_PAUSE,
+      TrackPlayer.CAPABILITY_PAUSE,
+      TrackPlayer.CAPABILITY_STOP,
+    ],
     compactCapabilities: [
       TrackPlayer.CAPABILITY_PLAY,
       TrackPlayer.CAPABILITY_PAUSE,
@@ -57,7 +62,7 @@ const Player = () => {
 
   const setUpTrackPlayer = async () => {
     try {
-     await TrackPlayer.setupPlayer();
+      await TrackPlayer.setupPlayer();
       await TrackPlayer.add([track]);
       console.log('Tracks added');
     } catch (e) {
@@ -66,25 +71,27 @@ const Player = () => {
   };
 
   const start = async () => {
+    TrackPlayer.destroy();
     TrackPlayer.setupPlayer();
     TrackPlayer.add([track]);
-    setDisplayBtnPlay(true);
     TrackPlayer.play();
-    setDisplayBtnPlay(false);
   };
 
   const stop = async () => {
     TrackPlayer.pause();
-    setDisplayBtnPlay(true);
   };
 
   const reset = async () => {
     console.log(isPlaying);
-    TrackPlayer.stop();
-    TrackPlayer.destroy();
-    TrackPlayer.add([track]);
+   TrackPlayer.stop();
+  TrackPlayer.destroy();
+    TrackPlayer.setupPlayer();
+    console.log(isPlaying);
+   // TrackPlayer.add([track]);
     TrackPlayer.play();
-    setDisplayBtnPlay(true);
+    console.log("okj")
+    console.log(isPlaying);
+    //  setDisplayBtnPlay(true);
   };
 
   return (
@@ -105,13 +112,13 @@ const Player = () => {
           display={isPlaying ? 'flex' : 'none'}
         />
       </View>
-      <View>
-        <Button
-          style={styles.button}
-          title="Live"
-          color="#841584"
+      <View style={styles.liveView}>
+        <TouchableOpacity
+          style={styles.liveButton}
           onPress={reset}
-        />
+          underlayColor="#fff">
+          <Text style={styles.liveText}>LIVE</Text>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -128,6 +135,24 @@ const styles = StyleSheet.create({
     color: 'white',
     position: 'absolute',
   },
+  liveView: {
+    margin: 10
+  },
+  liveButton: {
+    margin: 5,
+    padding: 5,
+    backgroundColor: '#99E8F4',
+    borderRadius: 10,
+    borderWidth: 1,
+    fontWeight: 500,
+    borderColor: 'white',
+  },
+  liveText:{
+    color:'#fff',
+    textAlign:'center',
+    paddingLeft : 10,
+    paddingRight : 10
+},
   buttonDiv: {
     height: 100,
     width: 100,
