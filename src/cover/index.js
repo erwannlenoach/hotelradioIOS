@@ -39,17 +39,23 @@ const styles = StyleSheet.create({
     flex: 3,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor:'lightgrey'
+    backgroundColor:'grey',
+    borderRadius: 10,
+    borderColor: 'white',
+    borderWidth: 1,
+    borderStyle: 'solid'
+
   },
-  playBtn: {
-    padding: 20,
-  },
+
   image: {
     width: 300,
     flex: 3,
     justifyContent: 'center',
     margin:0,
-
+    borderRadius: 10,
+    borderColor: 'white',
+    borderWidth: 1,
+    borderStyle: 'solid'
   },
 });
   

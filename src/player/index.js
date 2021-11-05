@@ -14,14 +14,7 @@ const events = [
 ];
 
 const Player = () => {
-  //const [displayBtnPlay, setDisplayBtnPlay] = useState(true);
   const [playerState, setPlayerState] = useState(false);
-
-  useEffect(() => {
-  setUpTrackPlayer();
-  //   return () => TrackPlayer.destroy();
-  });
-
   useTrackPlayerEvents(events, event => {
     if (event.type === TrackPlayerEvents.PLAYBACK_ERROR) {
       console.warn('An error occured while playing the current track.');
@@ -60,39 +53,26 @@ const Player = () => {
     ],
   });
 
-  const setUpTrackPlayer = async () => {
-    try {
-      await TrackPlayer.setupPlayer();
-      await TrackPlayer.add([track]);
+  const setUpTrackPlayer =  () => {
+     TrackPlayer.setupPlayer();
+      TrackPlayer.add([track]);
       console.log('Tracks added');
-    } catch (e) {
-      console.log(e);
-    }
+  
   };
 
+
   const start = async () => {
-    TrackPlayer.destroy();
+    
     TrackPlayer.setupPlayer();
     TrackPlayer.add([track]);
     TrackPlayer.play();
   };
 
-  const stop = async () => {
-    TrackPlayer.pause();
+  const pause = async () => {
+    TrackPlayer.stop();
+    TrackPlayer.play();
   };
 
-  const reset = async () => {
-    console.log(isPlaying);
-   TrackPlayer.stop();
-  TrackPlayer.destroy();
-    TrackPlayer.setupPlayer();
-    console.log(isPlaying);
-   // TrackPlayer.add([track]);
-    TrackPlayer.play();
-    console.log("okj")
-    console.log(isPlaying);
-    //  setDisplayBtnPlay(true);
-  };
 
   return (
     <View style={styles.container}>
@@ -108,17 +88,9 @@ const Player = () => {
           icon={faPause}
           size={40}
           style={styles.Btn}
-          onPress={stop}
+          onPress={pause}
           display={isPlaying ? 'flex' : 'none'}
         />
-      </View>
-      <View style={styles.liveView}>
-        <TouchableOpacity
-          style={styles.liveButton}
-          onPress={reset}
-          underlayColor="#fff">
-          <Text style={styles.liveText}>LIVE</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -138,21 +110,6 @@ const styles = StyleSheet.create({
   liveView: {
     margin: 10
   },
-  liveButton: {
-    margin: 5,
-    padding: 5,
-    backgroundColor: '#99E8F4',
-    borderRadius: 10,
-    borderWidth: 1,
-    fontWeight: 500,
-    borderColor: 'white',
-  },
-  liveText:{
-    color:'#fff',
-    textAlign:'center',
-    paddingLeft : 10,
-    paddingRight : 10
-},
   buttonDiv: {
     height: 100,
     width: 100,
