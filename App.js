@@ -3,8 +3,13 @@ import {StyleSheet, View, Image} from 'react-native';
 import Cover from './src/cover/index'
 import Player from './src/player/index';
 import Footer from './src/footer/index';
+import { LogBox } from 'react-native';
+
+LogBox.ignoreAllLogs();
 
 export default function App() {
+
+
   return (
     
         <View style={styles.container}>

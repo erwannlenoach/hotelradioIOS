@@ -4,7 +4,7 @@ import {View, Image, StyleSheet}  from 'react-native';
 const Cover = () => {
  
   const [url, setUrl] = useState(
-    'https://hotelradioparis.com/wp-content/uploads/2021/03/LogoELE.png');
+    null);
 
   useEffect(() => {
     myFetch();
@@ -36,9 +36,10 @@ const Cover = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 4,
+    flex: 3,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor:'lightgrey'
   },
   playBtn: {
     padding: 20,
