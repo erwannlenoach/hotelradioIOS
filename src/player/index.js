@@ -24,6 +24,10 @@ const Player = () => {
     }
   });
 
+  useEffect(() => {
+    setUpTrackPlayer();
+  });
+  
   const isPlaying = playerState === STATE_PLAYING;
 
   let track = {
@@ -62,8 +66,7 @@ const Player = () => {
 
 
   const start = async () => {
-    
-    TrackPlayer.setupPlayer();
+  
     TrackPlayer.add([track]);
     TrackPlayer.play();
   };
