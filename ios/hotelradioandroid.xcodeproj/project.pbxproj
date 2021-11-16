@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* hotelradioandroidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* hotelradioandroidTests.m */; };
+		0CE820AD2135850E248B23DD /* libPods-hotelradioandroid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CCB166133562DE6CE859A9 /* libPods-hotelradioandroid.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		2A1B2E7ADF4ABC7BA8964782 /* libPods-hotelradioandroid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A5FB214753B79FB4A8E4E0D /* libPods-hotelradioandroid.a */; };
+		772090C574DBE5668FC9A256 /* libPods-hotelradioandroid-hotelradioandroidTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11F798C2A25FE69445818971 /* libPods-hotelradioandroid-hotelradioandroidTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		BCFF357B5AEF20B53ADE49D5 /* libPods-hotelradioandroid-hotelradioandroidTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 053B40A21E1C50507E27EF39 /* libPods-hotelradioandroid-hotelradioandroidTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +30,19 @@
 		00E356EE1AD99517003FC87E /* hotelradioandroidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hotelradioandroidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* hotelradioandroidTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hotelradioandroidTests.m; sourceTree = "<group>"; };
-		03A9D76357107FC2B8BF4B56 /* Pods-hotelradioandroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid.debug.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid.debug.xcconfig"; sourceTree = "<group>"; };
-		053B40A21E1C50507E27EF39 /* libPods-hotelradioandroid-hotelradioandroidTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hotelradioandroid-hotelradioandroidTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F798C2A25FE69445818971 /* libPods-hotelradioandroid-hotelradioandroidTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hotelradioandroid-hotelradioandroidTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* hotelradioandroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hotelradioandroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = hotelradioandroid/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = hotelradioandroid/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = hotelradioandroid/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = hotelradioandroid/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = hotelradioandroid/main.m; sourceTree = "<group>"; };
-		2A5FB214753B79FB4A8E4E0D /* libPods-hotelradioandroid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hotelradioandroid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D306CF4EC21012EDD07C51A /* Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig"; sourceTree = "<group>"; };
+		5164D4FBA64774A4DC5EA51D /* Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig"; sourceTree = "<group>"; };
+		56A5117E801CB7F301563CA7 /* Pods-hotelradioandroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid.release.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid.release.xcconfig"; sourceTree = "<group>"; };
+		6273C85272CEDF6D42E0BE3B /* Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = hotelradioandroid/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		94FC49E8781BC5F71F196832 /* Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig"; sourceTree = "<group>"; };
-		AEE49A4D0E2983753593757E /* Pods-hotelradioandroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid.release.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid.release.xcconfig"; sourceTree = "<group>"; };
+		AFCB9E12E446C8866590181E /* Pods-hotelradioandroid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hotelradioandroid.debug.xcconfig"; path = "Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid.debug.xcconfig"; sourceTree = "<group>"; };
+		E8CCB166133562DE6CE859A9 /* libPods-hotelradioandroid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hotelradioandroid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCFF357B5AEF20B53ADE49D5 /* libPods-hotelradioandroid-hotelradioandroidTests.a in Frameworks */,
+				772090C574DBE5668FC9A256 /* libPods-hotelradioandroid-hotelradioandroidTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A1B2E7ADF4ABC7BA8964782 /* libPods-hotelradioandroid.a in Frameworks */,
+				0CE820AD2135850E248B23DD /* libPods-hotelradioandroid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,10 +86,10 @@
 		0A3FE9E28822D866604E6032 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				03A9D76357107FC2B8BF4B56 /* Pods-hotelradioandroid.debug.xcconfig */,
-				AEE49A4D0E2983753593757E /* Pods-hotelradioandroid.release.xcconfig */,
-				94FC49E8781BC5F71F196832 /* Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig */,
-				2D306CF4EC21012EDD07C51A /* Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig */,
+				AFCB9E12E446C8866590181E /* Pods-hotelradioandroid.debug.xcconfig */,
+				56A5117E801CB7F301563CA7 /* Pods-hotelradioandroid.release.xcconfig */,
+				5164D4FBA64774A4DC5EA51D /* Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig */,
+				6273C85272CEDF6D42E0BE3B /* Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -111,8 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				2A5FB214753B79FB4A8E4E0D /* libPods-hotelradioandroid.a */,
-				053B40A21E1C50507E27EF39 /* libPods-hotelradioandroid-hotelradioandroidTests.a */,
+				E8CCB166133562DE6CE859A9 /* libPods-hotelradioandroid.a */,
+				11F798C2A25FE69445818971 /* libPods-hotelradioandroid-hotelradioandroidTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "hotelradioandroidTests" */;
 			buildPhases = (
-				2298AE3CF04A64DE23D2CC05 /* [CP] Check Pods Manifest.lock */,
+				FFAADFBCDB303720FE716087 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				91328D7493354A7895E3999A /* [CP] Embed Pods Frameworks */,
-				412E310D56E4FB3D33524DF7 /* [CP] Copy Pods Resources */,
+				84C8D25642F76C2D6DEEAAC4 /* [CP] Embed Pods Frameworks */,
+				6E1B922F40000632861AF519 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "hotelradioandroid" */;
 			buildPhases = (
-				5529F4D252306616F56CF457 /* [CP] Check Pods Manifest.lock */,
+				D22F9B7848CCD0A61CAA2BF8 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				FD6BE20CDA90BDE2D9F9AF18 /* [CP] Embed Pods Frameworks */,
-				0EE331E8D776F3A93AE8A5F5 /* [CP] Copy Pods Resources */,
+				EDC4B01B4EBAEDAECAD4BBF6 /* [CP] Embed Pods Frameworks */,
+				85B3B014052C87E12D5A6EFD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -264,46 +264,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		0EE331E8D776F3A93AE8A5F5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2298AE3CF04A64DE23D2CC05 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-hotelradioandroid-hotelradioandroidTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		412E310D56E4FB3D33524DF7 /* [CP] Copy Pods Resources */ = {
+		6E1B922F40000632861AF519 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,7 +281,41 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5529F4D252306616F56CF457 /* [CP] Check Pods Manifest.lock */ = {
+		84C8D25642F76C2D6DEEAAC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85B3B014052C87E12D5A6EFD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D22F9B7848CCD0A61CAA2BF8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,21 +337,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		91328D7493354A7895E3999A /* [CP] Embed Pods Frameworks */ = {
+		EDC4B01B4EBAEDAECAD4BBF6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid-hotelradioandroidTests/Pods-hotelradioandroid-hotelradioandroidTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -378,21 +373,26 @@
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		FD6BE20CDA90BDE2D9F9AF18 /* [CP] Embed Pods Frameworks */ = {
+		FFAADFBCDB303720FE716087 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-hotelradioandroid-hotelradioandroidTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hotelradioandroid/Pods-hotelradioandroid-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -428,7 +428,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94FC49E8781BC5F71F196832 /* Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig */;
+			baseConfigurationReference = 5164D4FBA64774A4DC5EA51D /* Pods-hotelradioandroid-hotelradioandroidTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -455,7 +455,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D306CF4EC21012EDD07C51A /* Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig */;
+			baseConfigurationReference = 6273C85272CEDF6D42E0BE3B /* Pods-hotelradioandroid-hotelradioandroidTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -479,7 +479,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03A9D76357107FC2B8BF4B56 /* Pods-hotelradioandroid.debug.xcconfig */;
+			baseConfigurationReference = AFCB9E12E446C8866590181E /* Pods-hotelradioandroid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -509,7 +509,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEE49A4D0E2983753593757E /* Pods-hotelradioandroid.release.xcconfig */;
+			baseConfigurationReference = 56A5117E801CB7F301563CA7 /* Pods-hotelradioandroid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

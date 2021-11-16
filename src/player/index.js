@@ -4,8 +4,8 @@ import TrackPlayer, {
   TrackPlayerEvents,
   STATE_PLAYING,
 } from 'react-native-track-player';
-import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
-import {faPlay, faPause} from '@fortawesome/free-solid-svg-icons';
+import {View, StyleSheet} from 'react-native';
+import {faPlay,faPause} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 
 const events = [
@@ -15,6 +15,13 @@ const events = [
 
 const Player = () => {
   const [playerState, setPlayerState] = useState(false);
+  const [titleShow, setTitleShow] = useState(null);
+
+  useEffect(() => {
+    myFetch();
+    setUpTrackPlayer();
+  });
+
   useTrackPlayerEvents(events, event => {
     if (event.type === TrackPlayerEvents.PLAYBACK_ERROR) {
       console.warn('An error occured while playing the current track.');
@@ -24,23 +31,17 @@ const Player = () => {
     }
   });
 
-  useEffect(() => {
-    setUpTrackPlayer();
-  });
-  
   const isPlaying = playerState === STATE_PLAYING;
 
-  let track = {
-    url: 'https://radio2.pro-fhi.net/radio/9111/stream.mp3',
-    title: 'Hotel Radio',
-    artist: 'Hotel Radio',
-    album: 'Hotel Radio',
-    genre: 'Hip-Hop, Electro',
-    date: '2014-05-20T07:00:00+00:00',
-    artwork:
-      'https://hotelradioparis.com/wp-content/uploads/2021/03/LogoELE.png',
-    duration: 402, // Duration in seconds
-  };
+  async function myFetch() {
+    const cheerio = require('react-native-cheerio');
+    let response = await fetch('https://hotelradioparis.com/radio/');
+    let text = await response.text();
+    const $ = cheerio.load(text);
+    let html = $('h4')
+    let title = html.text().trim()
+    setTitleShow(`${title}`);
+  }
 
   TrackPlayer.updateOptions({
     stopWithApp: false,
@@ -57,23 +58,35 @@ const Player = () => {
     ],
   });
 
-  const setUpTrackPlayer =  () => {
-     TrackPlayer.setupPlayer();
-      TrackPlayer.add([track]);
-      console.log('Tracks added');
+   const setUpTrackPlayer = () => {
+    myFetch()
+    TrackPlayer.setupPlayer();
+    TrackPlayer.add([track]);
+    console.log('Tracks added');
   
   };
 
-
-  const start = async () => {
-  
+  const start =   () => {
+   myFetch()
     TrackPlayer.add([track]);
     TrackPlayer.play();
   };
 
-  const pause = async () => {
+  const pause = () => {
     TrackPlayer.stop();
     TrackPlayer.play();
+  };
+
+  let track = {
+    url: 'https://radio2.pro-fhi.net/radio/9111/stream.mp3',
+    title: titleShow === null ? "" : `${titleShow}`,
+    artist: 'Hotel Radio',
+    album: null,
+    genre: 'Hip-Hop, Electro',
+    date: '2014-05-20T07:00:00+00:00',
+    artwork:
+      'https://hotelradioparis.com/wp-content/uploads/2021/03/LogoELE.png',
+    duration: 402, // Duration in seconds
   };
 
 
@@ -111,7 +124,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   liveView: {
-    margin: 10
+    margin: 10,
   },
   buttonDiv: {
     height: 100,
