@@ -43,6 +43,19 @@ const Player = () => {
     setTitleShow(`${title}`);
   }
 
+  let track = {
+    url: 'https://radio2.pro-fhi.net/radio/9111/stream.mp3',
+    title: titleShow === null ? "" : `${titleShow}`,
+    artist: 'Hotel Radio',
+    album: null,
+    genre: 'Hip-Hop, Electro',
+    date: '2014-05-20T07:00:00+00:00',
+    artwork:
+      require('../../assets/img/logo_hotel_radio_square.jpeg'),
+    duration: 402
+  };
+
+
   TrackPlayer.updateOptions({
     stopWithApp: false,
     capabilities: [
@@ -77,19 +90,7 @@ const Player = () => {
     TrackPlayer.play();
   };
 
-  let track = {
-    url: 'https://radio2.pro-fhi.net/radio/9111/stream.mp3',
-    title: titleShow === null ? "" : `${titleShow}`,
-    artist: 'Hotel Radio',
-    album: null,
-    genre: 'Hip-Hop, Electro',
-    date: '2014-05-20T07:00:00+00:00',
-    artwork:
-      'https://hotelradioparis.com/wp-content/uploads/2021/03/LogoELE.png',
-    duration: 402, // Duration in seconds
-  };
-
-
+  
   return (
     <View style={styles.container}>
       <View style={styles.buttonDiv}>
