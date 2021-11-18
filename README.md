@@ -1,4 +1,4 @@
-# Hotel Radio App - Android 
+# Hotel Radio App - IOS 
 
 Freelance project of a web radio app for Hotel Radio Paris, a Parisian independant radio.
 
@@ -18,11 +18,11 @@ React Native Cheerio : 1.00
 
 *Local mode steps*
 
-git clone git@github.com:erwannlenoach/hotelradio_android.git
-cd ios
-pod install 
-cd .. 
-npx react-native start
-npx react-native run-ios 
+- git clone git@github.com:erwannlenoach/hotelradioIOS.git
+- cd ios
+- pod install 
+- cd .. 
+- npx react-native start
+- npx react-native run-ios 
 
 By Erwann Le Noac'h alias @erwannlenoach
