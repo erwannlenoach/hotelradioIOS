@@ -20,7 +20,7 @@ const Player = () => {
   useEffect(() => {
     myFetch();
     setUpTrackPlayer();
-  });
+  }, []);
 
   useTrackPlayerEvents(events, event => {
     if (event.type === TrackPlayerEvents.PLAYBACK_ERROR) {
@@ -72,25 +72,21 @@ const Player = () => {
   });
 
    const setUpTrackPlayer = () => {
-    myFetch()
     TrackPlayer.setupPlayer();
     TrackPlayer.add([track]);
     console.log('Tracks added');
-  
   };
 
   const start =   () => {
-   myFetch()
-    TrackPlayer.add([track]);
     TrackPlayer.play();
   };
 
   const pause = () => {
     TrackPlayer.stop();
-    TrackPlayer.play();
+    setUpTrackPlayer()
   };
 
-  
+ 
   return (
     <View style={styles.container}>
       <View style={styles.buttonDiv}>
