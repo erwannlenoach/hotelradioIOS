@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Image, StyleSheet, Text, SafeAreaView, Button} from 'react-native';
+import {View, Image, StyleSheet, Text, SafeAreaView} from 'react-native';
 
 const Cover = () => {
   const [url, setUrl] = useState(null);
@@ -27,8 +27,6 @@ const Cover = () => {
     );
     
     let time = $(timeHTML).text().trim().replace('access_time', '')
-    console.log(time)
-
     setUrl(src);
     setTitle(title);
     setTime(time);
