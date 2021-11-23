@@ -51,7 +51,7 @@ const Player = () => {
     genre: 'Hip-Hop, Electro',
     date: '2014-05-20T07:00:00+00:00',
     artwork:
-      require('../../assets/img/logo_hotel_radio_square.jpeg'),
+      require('../../assets/img/logo_hotel_radio_square.jpg'),
     duration: 402
   };
 
