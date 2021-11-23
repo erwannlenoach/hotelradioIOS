@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:hotelradioandroid.xcodeproj">
+      location = "group:/Users/erwannlnc/Documents/Coding/personal_projects/hotelradio/hotelradioIOS/ios/HotelRadioApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
